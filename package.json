@@ -1,0 +1,15 @@
+{
+  "name": "jm_imagecollection_rendering",
+  "version": "1.0.0",
+  "description": "Responsive and easy-to-use rendering of Typo3 image collections",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "2.3.1",
+    "gulp-clean-css": "2.0.6",
+    "gulp-rename": "1.2.2"
+  },
+  "author": "Jens Mittag",
+  "license": "GPL-3.0",
+  "repository": "https://github.com/m00re/jm_imagecollection_rendering.git"
+}

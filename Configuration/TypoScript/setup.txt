@@ -1,0 +1,22 @@
+lib.parseFunc_RTE.allowTags:=addToList(imagecollection)
+lib.parseFunc.allowTags:=addToList(imagecollection)
+
+lib.parseFunc.tags.imagecollection = TEXT
+lib.parseFunc.tags.imagecollection {
+	current = 1
+	postUserFunc = JensMittag\JmImagecollectionRendering\Controller\ImageCollectionController->render
+	postUserFunc {
+		view {
+			templateRootPath = {$plugin.tx_jmimagecollectionrendering.view.templateRootPath}
+			partialRootPath = {$plugin.tx_jmimagecollectionrendering.view.partialRootPath}
+			layoutRootPath = {$plugin.tx_jmimagecollectionrendering.view.layoutRootPath}
+		}
+		settings {
+			maxImageHeight = {$plugin.tx_jmimagecollectionrendering.settings.maxImageHeight}
+			portfolioCss = {$plugin.tx_jmimagecollectionrendering.settings.portfolioCss}
+			portfolioJs = {$plugin.tx_jmimagecollectionrendering.settings.portfolioJs}
+		}
+	}
+}
+
+lib.parseFunc_RTE.tags.imagecollection < lib.parseFunc.tags.imagecollection

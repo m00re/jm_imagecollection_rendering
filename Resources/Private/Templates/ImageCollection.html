@@ -1,0 +1,21 @@
+<div class="csc-textpic csc-textpic-center csc-textpic-above">
+	<div class="csc-textpic-imagewrap">
+		<div class="csc-textpic-center-outer">
+			<div class="csc-textpic-center-inner">
+				<f:for each="{images}" as="image" iteration="it">
+				<div class="csc-textpic-imagerow">
+					<div class="csc-textpic-imagecolumn csc-textpic-firstcol csc-textpic-lastcol">
+						<figure class="csc-textpic-image csc-textpic-last">
+							<f:image src="{image.url}"
+									 width="{image.clickEnlargeWidth}"
+									 height="{settings.clickEnlargeHeight}"
+									 alt=""
+									 class="{image.class}" />
+						</figure>
+					</div>
+				</div>
+				</f:for>
+			</div>
+		</div>
+	</div>
+</div>
