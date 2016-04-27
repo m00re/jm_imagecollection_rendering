@@ -1,13 +1,14 @@
-
 plugin.tx_jmimagecollectionrendering {
-	view {
-		templateRootPath = EXT:jm_imagecollection_rendering/Resources/Private/Templates/
-		partialRootPath = EXT:jm_imagecollection_rendering/Resources/Private/Partials/
-		layoutRootPath = EXT:jm_imagecollection_rendering/Resources/Private/Layouts/
+    view {
+        templateRootPath = EXT:jm_imagecollection_rendering/Resources/Private/Templates/
+        partialRootPath = EXT:jm_imagecollection_rendering/Resources/Private/Partials/
+        layoutRootPath = EXT:jm_imagecollection_rendering/Resources/Private/Layouts/
 	}
-	settings {
-		maxImageHeight = 800
-		portfolioCss = EXT:jm_imagecollection_rendering/Resources/Public/CSS/portfolio.min.css
-		portfolioJs = EXT:jm_imagecollection_rendering/Resources/Public/Javascript/portfolio.js
-	}
+    settings {
+        # cat=tx_jmimagecollectionrendering/page; type=int+; label=Maximum height of images
+        maxImageHeight = 800
+        # cat=tx_jmimagecollectionrendering/file; type=file[css]; label=Location of CSS file to use
+        portfolioCss = EXT:jm_imagecollection_rendering/Resources/Public/CSS/portfolio.min.css
+        portfolioJs = EXT:jm_imagecollection_rendering/Resources/Public/Javascript/portfolio.js
+    }
 }

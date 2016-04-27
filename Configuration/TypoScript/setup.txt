@@ -20,3 +20,33 @@ lib.parseFunc.tags.imagecollection {
 }
 
 lib.parseFunc_RTE.tags.imagecollection < lib.parseFunc.tags.imagecollection
+
+# Override default CSS styles
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE >
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE (
+	/* Headers */
+	.csc-header-alignment-center { text-align: center; }
+	.csc-header-alignment-right { text-align: right; }
+	.csc-header-alignment-left { text-align: left; }
+
+	/* Set padding for tables */
+	div.csc-textpic .csc-textpic-imagewrap table { border-collapse: collapse; border-spacing: 0; }
+	div.csc-textpic .csc-textpic-imagewrap table tr td { padding: 0; vertical-align: top; }
+
+	/* File Links */
+	ul.csc-uploads { padding: 0; }
+	ul.csc-uploads li { list-style: none outside none; margin: 1em 0; }
+	ul.csc-uploads img { float: left; margin-right: 1em; vertical-align: top; }
+	ul.csc-uploads span { display: block; }
+	ul.csc-uploads span.csc-uploads-fileName { text-decoration: underline; }
+
+	/* Table background colors: */
+
+	table.contenttable-color-1 { background-color: {$styles.content.table.backgroundColor.1}; }
+	table.contenttable-color-2 { background-color: {$styles.content.table.backgroundColor.2}; }
+	table.contenttable-color-240 { background-color: {$styles.content.table.backgroundColor.240}; }
+	table.contenttable-color-241 { background-color: {$styles.content.table.backgroundColor.241}; }
+	table.contenttable-color-242 { background-color: {$styles.content.table.backgroundColor.242}; }
+	table.contenttable-color-243 { background-color: {$styles.content.table.backgroundColor.243}; }
+	table.contenttable-color-244 { background-color: {$styles.content.table.backgroundColor.244}; }
+)

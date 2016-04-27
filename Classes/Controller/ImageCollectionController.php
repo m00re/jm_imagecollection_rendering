@@ -65,7 +65,7 @@ class ImageCollectionController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
 				$image['ratio'] = $properties['width'] / $properties['height'];
 				$image['url'] = $fileObject->getPublicUrl();
 				$image['fileObj'] = $fileObject;
-				print_r($fileObject);
+				$image['title'] = $fileObject->getTitle();
 				$image['clickEnlargeWidth'] = $this->conf['settings.']['maxImageHeight'] * $image['ratio'];
 				if ($image['ratio'] > 1.0) {
 					$image['class'] = "landscape r" . number_format($image['ratio'], 1, "", "");
